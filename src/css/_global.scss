@@ -1,0 +1,15 @@
+:root {
+  --transition: all 0.3s linear;
+  --spacing: 0.32rem;
+  --radius: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+  transition: all 0.3s linear;
+}
+
+ul {
+  list-style-type: none;
+}
