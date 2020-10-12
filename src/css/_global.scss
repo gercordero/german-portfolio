@@ -1,15 +1,39 @@
 :root {
   --transition: all 0.3s linear;
-  --spacing: 0.32rem;
-  --radius: 0.4rem;
+  --spacing: 0.15rem;
+  --radius: 1.5625rem;
+  --gray: #262626;
 }
 
 a {
   text-decoration: none;
-  color: #262626;
+  color: var(--gray);
   transition: all 0.3s linear;
+  outline-color: var(--secondary) !important;
 }
 
 ul {
+  padding: 0;
   list-style-type: none;
+}
+
+button {
+  background: var(--white);
+  color: var(--primary);
+  padding: 0.6rem 0.6rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 1.3rem;
+  border: 4px solid var(--primary);
+  border-radius: var(--radius);
+  outline-color: var(--secondary) !important;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-weight: 700;
 }
