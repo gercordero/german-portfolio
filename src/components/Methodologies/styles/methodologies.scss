@@ -1,0 +1,49 @@
+.methodologies-section {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.methodologies-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  right: 0;
+  left: 0;
+  bottom: 60%;
+  background: var(--primary);
+}
+
+.methodologies {
+  z-index: 4;
+  background-color: var(--white);
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+}
+
+.methodologies-title {
+  color: white;
+}
+
+.methodologie {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.methodologie svg {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.methodologie:hover svg {
+  color: var(--secondary);
+}
+
+@media screen and (min-height: 736px) {
+  .methodologies-section {
+    padding-top: 0;
+  }
+}

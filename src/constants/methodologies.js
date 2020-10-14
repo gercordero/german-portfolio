@@ -1,23 +1,30 @@
 import React from "react"
-import { FaCode, FaSketch, FaAndroid } from "react-icons/fa"
+import { FaBolt, FaMobile, FaLightbulb, FaRocket } from "react-icons/fa"
 
 export default [
   {
     id: 1,
-    icon: <FaCode className="service-icon" />,
-    title: "web development",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: <FaBolt className="methodologie-icon" />,
+    title: "Fast",
+    text: `Fast load times and lag free interaction, my highest priority.`,
   },
   {
     id: 2,
-    icon: <FaSketch className="service-icon" />,
-    title: "web design",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: <FaMobile className="methodologie-icon" />,
+    title: "Responsive",
+    text: `My layouts will work on any device, big or small.`,
   },
   {
     id: 3,
-    icon: <FaAndroid className="service-icon" />,
-    title: "app design",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: <FaLightbulb className="methodologie-icon" />,
+    title: "Intuitive",
+    text: `Strong preference for easy to use, intuitive UX/UI.`,
+  },
+  {
+    id: 4,
+    icon: <FaRocket className="methodologie-icon" />,
+    title: "Dynamic",
+    text: `Websites don't have to be static, I love making pages come to
+    life.`,
   },
 ]

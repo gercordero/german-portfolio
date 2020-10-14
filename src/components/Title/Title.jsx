@@ -1,7 +1,13 @@
 import React from "react"
+import "./styles/title.scss"
 
-const Title = () => {
-  return <h2>title component</h2>
+const Title = ({ styleClass, children }) => {
+  return (
+    <div className={`title ${styleClass ? styleClass : ""}`}>
+      <h2>{children}</h2>
+      <div className="underline"></div>
+    </div>
+  )
 }
 
 export default Title
