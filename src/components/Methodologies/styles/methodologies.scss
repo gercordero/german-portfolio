@@ -42,8 +42,25 @@
   color: var(--secondary);
 }
 
+.border-right {
+  border: none !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
 @media screen and (min-height: 736px) {
   .methodologies-section {
     padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .border-bottom {
+    border: none !important;
+  }
+  .border-right {
+    border-right: 1px solid #dee2e6 !important;
   }
 }

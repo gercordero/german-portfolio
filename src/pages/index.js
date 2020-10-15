@@ -14,8 +14,7 @@ export default () => {
     <Layout>
       <Hero />
       <Methodologies />
-
-      <div style={{ height: "100vh", backgroundColor: "blue" }}></div>
+      {/* <div style={{ height: "100vh", backgroundColor: "blue" }}></div> */}
     </Layout>
   )
 }

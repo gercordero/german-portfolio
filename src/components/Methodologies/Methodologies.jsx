@@ -12,7 +12,7 @@ const Methodologies = () => {
         <Row className="methodologies">
           {methodologies.map((method, index) => {
             const { id, icon, title, text } = method
-            const style = index < 3 ? "border-right" : ""
+            const style = index < 3 ? "border-bottom border-right" : ""
             return (
               <Col md key={id} className={`methodologie ${style}`}>
                 {icon}
