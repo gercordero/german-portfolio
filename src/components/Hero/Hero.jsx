@@ -34,7 +34,7 @@ const Hero = () => {
           <Row>
             <Col className="hero-info">
               <h1 className="display-4">I’m Germán</h1>
-              <h4>Front-end Web Developer & Designer</h4>
+              <h2>Front-end Web Developer & Designer</h2>
               <button className="hero-btn">Contact me</button>
               <SocialLinks />
             </Col>

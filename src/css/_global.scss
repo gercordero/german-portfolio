@@ -2,7 +2,20 @@
   --transition: all 0.3s linear;
   --spacing: 0.15rem;
   --radius: 1.5625rem;
+  --radius-2: 0.25rem;
   --gray: #262626;
+  --gray-2: #617d98;
+  --gray-3: #dae2ec;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--spacing);
+}
+
+h3 {
+  font-weight: 300;
 }
 
 a {
@@ -40,13 +53,4 @@ button {
 
 .section {
   padding: 5rem 0;
-}
-
-.underline {
-  width: 8rem;
-  height: 0.4rem;
-  margin-bottom: 2rem;
-  background: var(--white);
-  margin-left: auto;
-  margin-right: auto;
 }

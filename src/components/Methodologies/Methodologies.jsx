@@ -8,7 +8,12 @@ const Methodologies = () => {
   return (
     <section className="methodologies-section">
       <Container>
-        <Title styleClass={"methodologies-title"}>Methodologies</Title>
+        <Title
+          titleStyle={"methodologies-title"}
+          underlineStyle={"methodologies-title-underline"}
+        >
+          Methodologies
+        </Title>
         <Row className="methodologies">
           {methodologies.map((method, index) => {
             const { id, icon, title, text } = method

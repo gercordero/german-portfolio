@@ -1,11 +1,13 @@
 import React from "react"
 import "./styles/title.scss"
 
-const Title = ({ styleClass, children }) => {
+const Title = ({ titleStyle, underlineStyle, children }) => {
   return (
-    <div className={`title ${styleClass ? styleClass : ""}`}>
+    <div className={`title ${titleStyle ? titleStyle : ""}`}>
       <h2>{children}</h2>
-      <div className="underline"></div>
+      <div
+        className={`title-underline ${underlineStyle ? underlineStyle : ""}`}
+      ></div>
     </div>
   )
 }
