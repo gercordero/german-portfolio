@@ -6,6 +6,7 @@
   --gray: #262626;
   --gray-2: #617d98;
   --gray-3: #dae2ec;
+  --gray-4: #f1f5f8;
 }
 
 h1,
@@ -30,20 +31,6 @@ ul {
   list-style-type: none;
 }
 
-button {
-  background: var(--white);
-  color: var(--primary);
-  padding: 0.6rem 0.6rem;
-  letter-spacing: var(--spacing);
-  display: inline-block;
-  font-weight: 700;
-  transition: var(--transition);
-  font-size: 1.3rem;
-  border: 4px solid var(--primary);
-  border-radius: var(--radius);
-  outline-color: var(--secondary) !important;
-}
-
 .display-1,
 .display-2,
 .display-3,
@@ -53,4 +40,21 @@ button {
 
 .section {
   padding: 5rem 0;
+}
+
+.button {
+  text-decoration: none !important;
+  text-transform: capitalize;
+  outline-color: var(--secondary) !important;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+}
+
+.btn-gray {
+  text-transform: uppercase;
+  color: var(--gray-2);
+  background: var(--gray-3);
+  display: inline-block;
+  padding: 0.6rem 0.6rem;
+  border-radius: var(--radius-2);
 }

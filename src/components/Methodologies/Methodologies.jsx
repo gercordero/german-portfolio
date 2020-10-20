@@ -12,7 +12,7 @@ const Methodologies = () => {
           titleStyle={"methodologies-title"}
           underlineStyle={"methodologies-title-underline"}
         >
-          Methodologies
+          methodologies
         </Title>
         <Row className="methodologies">
           {methodologies.map((method, index) => {

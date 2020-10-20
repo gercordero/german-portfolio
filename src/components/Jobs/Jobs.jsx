@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Title } from "../"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import { Container } from "react-bootstrap"
+import Container from "react-bootstrap/Container"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import "./styles/jobs.scss"
@@ -35,7 +35,7 @@ const Jobs = () => {
 
   return (
     <section className="section">
-      <Title>Experience</Title>
+      <Title>experience</Title>
       <Container>
         <div className="jobs-grid">
           <div className="jobs-btns">
@@ -45,7 +45,7 @@ const Jobs = () => {
                 onClick={() => {
                   setSelectedJob(index)
                 }}
-                className={`job-button ${
+                className={`button job-button ${
                   index === selectedJob && "job-active-button"
                 }`}
               >
@@ -55,7 +55,7 @@ const Jobs = () => {
           </div>
           <div className="job-info">
             <h2>{position}</h2>
-            <h5>{company}</h5>
+            <h5 className="btn-gray">{company}</h5>
             <p className="job-date">{date}</p>
             {desc.map(item => (
               <div key={item.id} className="job-description">

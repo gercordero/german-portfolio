@@ -35,7 +35,9 @@ const Hero = () => {
             <Col className="hero-info">
               <h1 className="display-4">I’m Germán</h1>
               <h2>Front-end Web Developer & Designer</h2>
-              <button className="hero-btn">Contact me</button>
+              <Link to="/contact/" className="button hero-button">
+                contact me
+              </Link>
               <SocialLinks />
             </Col>
             <Col className="hero-image">
