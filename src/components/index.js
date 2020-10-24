@@ -1,3 +1,4 @@
+export { default as Container } from "./Container/Container"
 export { default as Blogs } from "./Blogs/Blogs"
 export { default as Footer } from "./Footer/Footer"
 export { default as Hero } from "./Hero/Hero"

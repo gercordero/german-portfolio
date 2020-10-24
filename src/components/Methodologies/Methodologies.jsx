@@ -1,34 +1,35 @@
 import React from "react"
-import { Title } from "../"
-import { Container, Row, Col } from "react-bootstrap"
 import methodologies from "../../constants/methodologies"
-import "./styles/methodologies.scss"
+import { Container } from "../"
+import {
+  MethodologiesSection,
+  StyledTitle,
+  StyledMethodologies,
+  Methodologie,
+} from "./styles/Methodologies.styles"
+import styles from "./styles/methodologies.module.css"
 
 const Methodologies = () => {
   return (
-    <section className="methodologies-section">
+    <MethodologiesSection>
       <Container>
-        <Title
-          titleStyle={"methodologies-title"}
-          underlineStyle={"methodologies-title-underline"}
-        >
-          methodologies
-        </Title>
-        <Row className="methodologies">
+        <StyledTitle>methodologies</StyledTitle>
+        <StyledMethodologies>
           {methodologies.map((method, index) => {
             const { id, icon, title, text } = method
-            const style = index < 3 ? "border-bottom border-right" : ""
+            const style =
+              index < 3 ? `${styles.borderBottom} ${styles.borderRight}` : ``
             return (
-              <Col md key={id} className={`methodologie ${style}`}>
+              <Methodologie key={id} className={style}>
                 {icon}
                 <h4>{title}</h4>
                 <p>{text}</p>
-              </Col>
+              </Methodologie>
             )
           })}
-        </Row>
+        </StyledMethodologies>
       </Container>
-    </section>
+    </MethodologiesSection>
   )
 }
 

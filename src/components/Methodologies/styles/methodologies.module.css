@@ -1,0 +1,16 @@
+.border-right {
+  border: none !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .border-bottom {
+    border: none !important;
+  }
+  .border-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+}

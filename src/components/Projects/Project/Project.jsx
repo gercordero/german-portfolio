@@ -1,8 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
-import "./styles/project.scss"
+import {
+  StyledProject,
+  ProjectImage,
+  ProjectInfo,
+  ProjectNumber,
+  ProjectDescription,
+  ProjectStack,
+} from "./styles/Project.styles"
+import styles from "./styles/project.module.css"
 
 const Project = ({
   strapiId,
@@ -14,31 +21,29 @@ const Project = ({
   stack,
 }) => {
   return (
-    <article className="project">
-      {image && (
-        <Image fluid={image.childImageSharp.fluid} className="project-img" />
-      )}
-      <div className="project-info">
-        <span className="project-number">0{strapiId}.</span>
+    <StyledProject>
+      {image && <ProjectImage fluid={image.childImageSharp.fluid} />}
+      <ProjectInfo>
+        <ProjectNumber>0{strapiId}.</ProjectNumber>
         <h3>{title || "default title"}</h3>
-        <p className="project-desc">{description}</p>
-        <div className="project-stack">
+        <ProjectDescription>{description}</ProjectDescription>
+        <ProjectStack>
           {stack.map(element => (
             <span key={element.id} className="btn-gray">
               {element.item}
             </span>
           ))}
-        </div>
+        </ProjectStack>
         <div className="project-links">
           <a href={github}>
-            <FaGithubSquare className="project-icon" />
+            <FaGithubSquare className={styles.projectIcon} />
           </a>
           <a href={url}>
-            <FaShareSquare className="project-icon" />
+            <FaShareSquare className={styles.projectIcon} />
           </a>
         </div>
-      </div>
-    </article>
+      </ProjectInfo>
+    </StyledProject>
   )
 }
 

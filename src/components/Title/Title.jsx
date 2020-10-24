@@ -1,14 +1,12 @@
 import React from "react"
-import "./styles/title.scss"
+import { StyledTitle } from "./styles/Title.styles"
 
-const Title = ({ titleStyle, underlineStyle, children }) => {
+const Title = ({ className, children }) => {
   return (
-    <div className={`title ${titleStyle ? titleStyle : ""}`}>
+    <StyledTitle className={className}>
       <h2>{children}</h2>
-      <div
-        className={`title-underline ${underlineStyle ? underlineStyle : ""}`}
-      ></div>
-    </div>
+      <div className="title-underline"></div>
+    </StyledTitle>
   )
 }
 

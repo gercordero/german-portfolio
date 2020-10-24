@@ -1,27 +1,27 @@
 import React from "react"
 import Project from "./Project/Project"
-import { Title } from "../"
-import { Link } from "gatsby"
-import Container from "react-bootstrap/Container"
-import "./styles/projects.scss"
+import { Title, Container } from "../"
+import {
+  StyledProjects,
+  ProjectsButtonContainer,
+  ProjectsButton,
+} from "./styles/Projects.styles"
 
 const Projects = ({ projects, title, showLink }) => {
   return (
-    <section className="section projects">
+    <StyledProjects>
       <Container>
         <Title>{title}</Title>
         {projects.map(project => (
           <Project key={project.strapiId} {...project} />
         ))}
-        <div className="projects-button-container">
+        <ProjectsButtonContainer className="button">
           {showLink && (
-            <Link to="/projects/" className="button projects-button">
-              all projects
-            </Link>
+            <ProjectsButton to="/projects/">all projects</ProjectsButton>
           )}
-        </div>
+        </ProjectsButtonContainer>
       </Container>
-    </section>
+    </StyledProjects>
   )
 }
 

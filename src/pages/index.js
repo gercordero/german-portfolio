@@ -8,6 +8,8 @@ import {
   Projects,
   Blogs,
 } from "../components"
+import { ThemeProvider } from "styled-components"
+import { theme } from "../styles/theme.styles"
 
 export default ({ data }) => {
   const {
@@ -15,13 +17,15 @@ export default ({ data }) => {
   } = data
 
   return (
-    <Layout>
-      <Hero />
-      <Methodologies />
-      <Jobs />
-      <Projects projects={projects} title="featured projects" showLink />
-      {/* <div style={{ height: "100vh", backgroundColor: "blue" }}></div> */}
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Hero />
+        <Methodologies />
+        <Jobs />
+        <Projects projects={projects} title="featured projects" showLink />
+        {/* <div style={{ height: "100vh", backgroundColor: "blue" }}></div> */}
+      </Layout>
+    </ThemeProvider>
   )
 }
 

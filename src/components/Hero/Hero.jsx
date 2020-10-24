@@ -1,11 +1,18 @@
 import React from "react"
 import Image from "gatsby-image"
 import heroSvg from "../../assets/hero-svg.svg"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
-import SocialLinks from "../../constants/socialLinks"
-import { Container } from "react-bootstrap"
-import "./styles/hero.scss"
+import {
+  StyledHero,
+  HeroGrid,
+  HeroCenter,
+  HeroInfo,
+  HeroImage,
+  HeroImageFooter,
+  HeroFooter,
+  HeroButton,
+  StyledSocialLinks,
+} from "./styles/Hero.styles"
 
 const heroImageQuery = graphql`
   {
@@ -28,27 +35,27 @@ const Hero = () => {
   } = data
 
   return (
-    <header className="hero">
-      <div className="hero-grid">
-        <div className="hero-center">
-          <div className="hero-info">
+    <StyledHero>
+      <HeroGrid>
+        <HeroCenter>
+          <HeroInfo>
             <h1 className="display-4">I’m Germán</h1>
             <h2>Front-end Web Developer & Designer</h2>
-            <Link to="/contact/" className="button hero-button">
+            <HeroButton to="/contact/" className="button">
               contact me
-            </Link>
-            <SocialLinks />
-          </div>
-          <div className="hero-image">
+            </HeroButton>
+            <StyledSocialLinks />
+          </HeroInfo>
+          <HeroImage>
             <Image fluid={fluid} alt="Hero image" />
-          </div>
-          <div className="hero-image-footer">
+          </HeroImage>
+          <HeroImageFooter>
             <img src={heroSvg} alt="Hero Desktop Svg" />
-          </div>
-        </div>
-        <div className="hero-footer" />
-      </div>
-    </header>
+          </HeroImageFooter>
+        </HeroCenter>
+        <HeroFooter />
+      </HeroGrid>
+    </StyledHero>
   )
 }
 

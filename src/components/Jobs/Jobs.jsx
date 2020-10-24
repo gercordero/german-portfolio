@@ -1,10 +1,16 @@
 import React, { useState } from "react"
-import { Title } from "../"
+import { Title, Container } from "../"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import Container from "react-bootstrap/Container"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
-import "./styles/jobs.scss"
+import {
+  JobsSection,
+  JobsGrid,
+  JobsButtons,
+  JobButton,
+  JobDate,
+  JobDescription,
+} from "./styles/Jobs.styles"
+import styles from "./styles/jobs.module.css"
 
 const jobsQuery = graphql`
   {
@@ -34,39 +40,41 @@ const Jobs = () => {
   const { position, company, date, desc } = jobs[selectedJob]
 
   return (
-    <section className="section">
+    <JobsSection>
       <Title>experience</Title>
       <Container>
-        <div className="jobs-grid">
-          <div className="jobs-btns">
+        <JobsGrid>
+          <JobsButtons>
             {jobs.map((job, index) => (
-              <button
+              <JobButton
                 key={job.strapiId}
                 onClick={() => {
                   setSelectedJob(index)
                 }}
-                className={`button job-button ${
-                  index === selectedJob && "job-active-button"
-                }`}
+                active={index === selectedJob}
               >
                 {job.company}
-              </button>
+              </JobButton>
             ))}
-          </div>
+          </JobsButtons>
           <div className="job-info">
             <h2>{position}</h2>
-            <h5 className="btn-gray">{company}</h5>
-            <p className="job-date">{date}</p>
+            <h5 className="btn-gray" style={{ marginBottom: "0.4rem" }}>
+              {company}
+            </h5>
+            <JobDate>{date}</JobDate>
             {desc.map(item => (
-              <div key={item.id} className="job-description">
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+              <JobDescription key={item.id}>
+                <FaAngleDoubleRight
+                  className={styles.jobIcon}
+                ></FaAngleDoubleRight>
                 <p>{item.item}</p>
-              </div>
+              </JobDescription>
             ))}
           </div>
-        </div>
+        </JobsGrid>
       </Container>
-    </section>
+    </JobsSection>
   )
 }
 

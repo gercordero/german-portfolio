@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react"
 import logo from "../../assets/logo.svg"
 import { FaBars } from "react-icons/fa"
-import NavLinks from "../../constants/links"
-import Container from "react-bootstrap/Container"
-import "./styles/navbar.scss"
+import {
+  StyledNav,
+  StyledContainer,
+  NavbarHeader,
+  ToggleBtn,
+  StyledNavLinks,
+} from "./styles/Navbar.styles"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -25,25 +29,21 @@ const Navbar = () => {
     }
   }, [])
 
-  //Add/Remove active style to nav depending on scrollY position
-  const navActive = scrolled ? "navbar-active" : ""
-
   return (
-    <nav className={`navbar ${navActive}`}>
-      <Container>
-        <div className="navbar-header">
+    <StyledNav active={scrolled}>
+      <StyledContainer>
+        <NavbarHeader>
           <img src={logo} alt="Portfolio logo" />
-        </div>
-        <button
+        </NavbarHeader>
+        <ToggleBtn
           type="button"
-          className="toggle-btn"
           // onClick={toggleSidebar}
         >
           <FaBars />
-        </button>
-        <NavLinks styleClass="nav-links" />
-      </Container>
-    </nav>
+        </ToggleBtn>
+        <StyledNavLinks />
+      </StyledContainer>
+    </StyledNav>
   )
 }
 

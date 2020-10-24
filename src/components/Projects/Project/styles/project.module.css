@@ -1,0 +1,9 @@
+.project-icon {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-right: 0.8rem;
+  transition: var(--transition);
+}
+.project-icon:hover {
+  color: var(--primary);
+}
