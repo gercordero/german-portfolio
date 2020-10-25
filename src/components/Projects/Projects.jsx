@@ -9,7 +9,7 @@ import {
 
 const Projects = ({ projects, title, showLink }) => {
   return (
-    <StyledProjects>
+    <StyledProjects paddign={showLink}>
       <Container>
         <Title>{title}</Title>
         {projects.map(project => (

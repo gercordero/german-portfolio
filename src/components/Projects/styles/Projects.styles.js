@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const StyledProjects = styled.section`
-  padding: 5rem 0;
+  padding: ${props => (props.paddign ? "5rem 0" : "10rem 0")};
   background-color: ${props => props.theme.gray4};
 `
 
