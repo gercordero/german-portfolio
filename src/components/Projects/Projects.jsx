@@ -1,11 +1,7 @@
 import React from "react"
 import Project from "./Project/Project"
-import { Title, Container } from "../"
-import {
-  StyledProjects,
-  ProjectsButtonContainer,
-  ProjectsButton,
-} from "./styles/Projects.styles"
+import { Title, Container, LinkButton } from "../"
+import { StyledProjects } from "./styles/Projects.styles"
 
 const Projects = ({ projects, title, showLink }) => {
   return (
@@ -15,11 +11,7 @@ const Projects = ({ projects, title, showLink }) => {
         {projects.map(project => (
           <Project key={project.strapiId} {...project} />
         ))}
-        <ProjectsButtonContainer className="button">
-          {showLink && (
-            <ProjectsButton to="/projects/">all projects</ProjectsButton>
-          )}
-        </ProjectsButtonContainer>
+        {showLink && <LinkButton to="/projects/">all projects</LinkButton>}
       </Container>
     </StyledProjects>
   )

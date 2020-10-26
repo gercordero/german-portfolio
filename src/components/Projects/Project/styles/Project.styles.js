@@ -57,7 +57,7 @@ export const ProjectInfo = styled.div`
   padding: 1.6rem 3.2rem;
   border-bottom-left-radius: ${props => props.theme.radius};
   border-bottom-right-radius: ${props => props.theme.radius};
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.darkShadow};
 
   h3 {
     font-weight: 500;
