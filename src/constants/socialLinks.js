@@ -5,22 +5,22 @@ const data = [
   {
     id: 1,
     icon: <FaInstagram className="social-icon"></FaInstagram>,
-    url: "https://www.twitter.com",
+    url: "https://www.instagram.com/ger.cordero/",
   },
   {
     id: 2,
     icon: <FaFacebook className="social-icon"></FaFacebook>,
-    url: "https://www.twitter.com",
+    url: "https://www.facebook.com/ger.cordero/",
   },
   {
     id: 3,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    url: "https://www.linkedin.com/in/german-cordero/",
   },
   {
     id: 4,
     icon: <FaGithub className="social-icon"></FaGithub>,
-    url: "https://www.twitter.com",
+    url: "https://github.com/gercordero",
   },
 ]
 
