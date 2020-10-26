@@ -7,17 +7,17 @@ import {
   BlogsContainer,
 } from "./styles/Blogs.styles"
 
-export const Blogs = ({ blogs, title, showLink }) => {
+export const Blogs = ({ blogs, title, isMainPage }) => {
   return (
-    <BlogsSection paddign={showLink}>
+    <BlogsSection isMainPage={isMainPage}>
       <Container>
-        <StyledTitle underline={showLink}>{title}</StyledTitle>
+        <StyledTitle isMainPage={isMainPage}>{title}</StyledTitle>
         <BlogsContainer>
           {blogs.map(blog => (
             <Blog key={blog.strapiId} {...blog} />
           ))}
         </BlogsContainer>
-        {showLink && <LinkButton to="/blog/">All Blogs</LinkButton>}
+        {isMainPage && <LinkButton to="/blog/">All Blogs</LinkButton>}
       </Container>
     </BlogsSection>
   )

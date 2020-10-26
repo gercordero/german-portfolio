@@ -3,15 +3,15 @@ import Project from "./Project/Project"
 import { Title, Container, LinkButton } from "../"
 import { StyledProjects } from "./styles/Projects.styles"
 
-const Projects = ({ projects, title, showLink }) => {
+const Projects = ({ projects, title, isMainPage }) => {
   return (
-    <StyledProjects paddign={showLink}>
+    <StyledProjects isMainPage={isMainPage}>
       <Container>
         <Title>{title}</Title>
         {projects.map(project => (
           <Project key={project.strapiId} {...project} />
         ))}
-        {showLink && <LinkButton to="/projects/">all projects</LinkButton>}
+        {isMainPage && <LinkButton to="/projects/">all projects</LinkButton>}
       </Container>
     </StyledProjects>
   )
