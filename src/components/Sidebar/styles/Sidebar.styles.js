@@ -19,14 +19,16 @@ export const StyledSidebar = styled.div`
 export const StyledLinks = styled(NavLinks)`
   display: flex;
   flex-direction: column;
+  margin-top: 5rem;
 
   & li a {
     display: block;
+    font-weight: 600;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: ${props => props.theme.spacing};
     margin-bottom: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     padding: 1rem 2rem;
     transition: ${props => props.theme.transition};
     border-radius: ${props => props.theme.radius2};
@@ -34,6 +36,14 @@ export const StyledLinks = styled(NavLinks)`
     &:hover {
       background: ${props => props.theme.secondary};
       color: ${props => props.theme.white};
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    margin-top: 0;
+
+    & li a {
+      font-size: 2.2rem;
     }
   }
 `

@@ -53,9 +53,14 @@ export const HeroInfo = styled.article`
   grid-column: 1 / -1;
   text-align: center;
   align-self: center;
+  height: 100%;
 
   & h2 {
     font-weight: 300;
+  }
+
+  @media screen and (min-width: 576px) {
+    height: unset;
   }
 
   @media screen and (min-width: 768px) and (min-height: 875px) {
@@ -118,7 +123,8 @@ export const HeroButton = styled(Link)`
 
 /* Social Links */
 export const StyledSocialLinks = styled(SocialLinks)`
-  margin-top: 3.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-evenly;
 
