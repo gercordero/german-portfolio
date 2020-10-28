@@ -14,9 +14,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/react": "^1.6.19",
     "babel-plugin-styled-components": "latest",
-    "gatsby": "^2.24.85",
+    "gatsby": "latest",
     "gatsby-image": "latest",
+    "gatsby-plugin-mdx": "^1.2.51",
     "gatsby-plugin-prefetch-google-fonts": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-sharp": "latest",
@@ -25,6 +28,8 @@
     "gatsby-source-filesystem": "latest",
     "gatsby-source-strapi": "latest",
     "gatsby-transformer-sharp": "latest",
+    "mdx-utils": "^0.2.0",
+    "prism-react-renderer": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",
