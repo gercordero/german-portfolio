@@ -16,7 +16,10 @@ export const StyledTitle = styled(props => <Title {...props} />)`
 
 export const BlogsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
   column-gap: 2rem;
   margin-bottom: 2rem;
+
+  @media screen and (min-width: 375px) {
+    grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  }
 `
