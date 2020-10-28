@@ -9,8 +9,10 @@ export const StyledNav = styled.nav`
   z-index: 100;
 
   //Active on scroll
-  background-color: ${props => (props.active ? props.theme.white : "")};
-  box-shadow: ${props => (props.active ? "0px 2px rgba(0, 0, 0, 0.1)" : "")};
+  background-color: ${props =>
+    props.active && !props.sideBarOpen ? props.theme.white : ""};
+  box-shadow: ${props =>
+    props.active && !props.sideBarOpen ? "0px 2px rgba(0, 0, 0, 0.1)" : ""};
 `
 
 export const StyledContainer = styled(Container)`

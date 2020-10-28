@@ -9,7 +9,7 @@ import {
   StyledNavLinks,
 } from "./styles/Navbar.styles"
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar, isOpen }) => {
   const [scrolled, setScrolled] = useState(false)
 
   //Function to check if page is scrolled
@@ -30,15 +30,12 @@ const Navbar = () => {
   }, [])
 
   return (
-    <StyledNav active={scrolled}>
+    <StyledNav active={scrolled} sideBarOpen={isOpen}>
       <StyledContainer>
         <NavbarHeader>
           <img src={logo} alt="Portfolio logo" />
         </NavbarHeader>
-        <ToggleBtn
-          type="button"
-          // onClick={toggleSidebar}
-        >
+        <ToggleBtn type="button" onClick={toggleSidebar}>
           <FaBars />
         </ToggleBtn>
         <StyledNavLinks />

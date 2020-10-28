@@ -17,6 +17,7 @@
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "babel-plugin-styled-components": "latest",
+    "body-scroll-lock": "^3.1.5",
     "gatsby": "latest",
     "gatsby-image": "latest",
     "gatsby-plugin-mdx": "^1.2.51",

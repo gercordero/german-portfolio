@@ -5,10 +5,6 @@ export const StyledProject = styled.article`
   display: grid;
   margin-bottom: 6.4rem;
 
-  &:hover ${ProjectImage}::after {
-    opacity: 0;
-  }
-
   @media screen and (min-width: 992px) {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
@@ -35,6 +31,10 @@ export const ProjectImage = styled(Image)`
     );
     opacity: 0.85;
     transition: ${props => props.theme.transition};
+  }
+
+  ${StyledProject}:hover &::after {
+    opacity: 0;
   }
 
   @media screen and (min-width: 768px) {

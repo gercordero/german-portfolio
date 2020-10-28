@@ -53,6 +53,7 @@ Project.propTypes = {
   image: PropTypes.object.isRequired,
   github: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  stack: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default Project
