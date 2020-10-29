@@ -7,7 +7,7 @@ import { StyledSidebar, StyledLinks } from "./styles/Sidebar.styles"
 const Sidebar = ({ isOpen }) => {
   return (
     <StyledSidebar showSidebar={isOpen}>
-      <StyledLinks></StyledLinks>
+      <StyledLinks showLinks={isOpen}></StyledLinks>
     </StyledSidebar>
   )
 }

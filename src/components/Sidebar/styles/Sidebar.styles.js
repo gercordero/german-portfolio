@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import NavLinks from "../../../constants/links"
 
 export const StyledSidebar = styled.div`
@@ -14,6 +14,17 @@ export const StyledSidebar = styled.div`
   transition: var(--transition);
   opacity: ${props => (props.showSidebar ? 1 : 0)};
   transform: translateX(${props => (props.showSidebar ? `0` : `-100%`)});
+`
+
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 `
 
 export const StyledLinks = styled(NavLinks)`
@@ -37,6 +48,32 @@ export const StyledLinks = styled(NavLinks)`
       background: ${props => props.theme.secondary};
       color: ${props => props.theme.white};
     }
+  }
+
+  /* Li animations */
+  & li {
+    opacity: 0;
+    animation-name: ${props => (props.showLinks ? slideRight : "")};
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  & li:nth-of-type(1) {
+    animation-delay: 0.25s;
+  }
+  & li:nth-of-type(2) {
+    animation-delay: 0.5s;
+  }
+  & li:nth-of-type(3) {
+    animation-delay: 0.75s;
+  }
+  & li:nth-of-type(4) {
+    animation-delay: 1s;
+  }
+  & li:nth-of-type(5) {
+    animation-delay: 1.25s;
   }
 
   @media screen and (min-width: 576px) {

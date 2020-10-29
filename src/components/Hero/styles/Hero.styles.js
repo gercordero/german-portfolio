@@ -53,7 +53,7 @@ export const HeroInfo = styled.article`
   grid-column: 1 / -1;
   text-align: center;
   align-self: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
 
   & h2 {
     font-weight: 300;
@@ -80,7 +80,7 @@ export const HeroImageFooter = styled.div`
   text-align: center;
   grid-row: 2/3;
   grid-column: 1 / span 12;
-  margin-bottom: -5px;
+  margin-bottom: -6px;
   align-self: end;
 
   img {
