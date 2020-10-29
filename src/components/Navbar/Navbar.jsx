@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import logo from "../../assets/logo.svg"
-import { FaBars } from "react-icons/fa"
 import {
   StyledNav,
   StyledContainer,
   NavbarHeader,
   ToggleBtn,
+  ToggleBtnBurger,
   StyledNavLinks,
 } from "./styles/Navbar.styles"
 
@@ -36,7 +36,7 @@ const Navbar = ({ toggleSidebar, isOpen }) => {
           <img src={logo} alt="Portfolio logo" />
         </NavbarHeader>
         <ToggleBtn type="button" onClick={toggleSidebar}>
-          <FaBars />
+          <ToggleBtnBurger sideBarOpen={isOpen} />
         </ToggleBtn>
         <StyledNavLinks />
       </StyledContainer>

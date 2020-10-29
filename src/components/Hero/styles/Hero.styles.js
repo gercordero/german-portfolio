@@ -53,14 +53,10 @@ export const HeroInfo = styled.article`
   grid-column: 1 / -1;
   text-align: center;
   align-self: center;
-  height: 100%;
+  margin-top: 2rem;
 
   & h2 {
     font-weight: 300;
-  }
-
-  @media screen and (min-width: 576px) {
-    height: unset;
   }
 
   @media screen and (min-width: 768px) and (min-height: 875px) {

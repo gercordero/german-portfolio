@@ -32,18 +32,54 @@ export const NavbarHeader = styled.div`
   }
 `
 
-export const ToggleBtn = styled.button`
-  margin-top: 1rem;
-  font-size: 2.5rem;
-  background: transparent;
-  border-color: transparent;
-  color: ${props => props.theme.primary};
+export const ToggleBtn = styled.div`
+  margin-top: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
-  transition: ${props => props.theme.transition};
-  outline-color: ${props => props.theme.secondary};
+  transition: all 0.5s ease-in-out;
 
   @media screen and (min-width: 992px) {
     display: none;
+  }
+`
+
+export const ToggleBtnBurger = styled.div`
+  width: 50px;
+  height: 6px;
+  border-radius: 5px;
+  background: ${props =>
+    props.sideBarOpen ? "transparent" : props.theme.primary};
+  transition: all 0.5s ease-in-out;
+  transform: ${props => (props.sideBarOpen ? "translateX(-50px)" : "")};
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    border-radius: 5px;
+    background: ${props => props.theme.primary};
+    transition: all 0.5s ease-in-out;
+  }
+
+  &::before {
+    transform: ${props =>
+      props.sideBarOpen
+        ? "rotate(45deg) translate(35px, -35px)"
+        : "translateY(-16px)"};
+  }
+
+  &::after {
+    transform: ${props =>
+      props.sideBarOpen
+        ? "rotate(-45deg) translate(35px, 35px)"
+        : "translateY(16px)"};
   }
 `
 
