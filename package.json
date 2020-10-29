@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "name": "german-portfolio",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A web portfolio powered by Gatsby",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -16,34 +16,34 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
-    "babel-plugin-styled-components": "latest",
+    "babel-plugin-styled-components": "^1.11.1",
     "body-scroll-lock": "^3.1.5",
-    "gatsby": "latest",
-    "gatsby-image": "latest",
-    "gatsby-plugin-mdx": "^1.2.51",
-    "gatsby-plugin-prefetch-google-fonts": "latest",
-    "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-sharp": "latest",
-    "gatsby-plugin-sitemap": "latest",
-    "gatsby-plugin-styled-components": "latest",
-    "gatsby-source-filesystem": "latest",
-    "gatsby-source-strapi": "latest",
-    "gatsby-transformer-sharp": "latest",
+    "fontsource-open-sans": "^3.0.9",
+    "fontsource-roboto": "^3.0.3",
+    "gatsby": "^2.24.91",
+    "gatsby-image": "^2.4.21",
+    "gatsby-plugin-mdx": "^1.2.52",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-plugin-sitemap": "^2.4.17",
+    "gatsby-plugin-styled-components": "^3.3.14",
+    "gatsby-source-filesystem": "^2.3.37",
+    "gatsby-source-strapi": "0.0.12",
+    "gatsby-transformer-sharp": "^2.5.20",
     "mdx-utils": "^0.2.0",
-    "prism-react-renderer": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-helmet": "latest",
-    "react-icons": "latest",
-    "react-markdown": "latest",
-    "styled-components": "latest"
+    "prism-react-renderer": "^1.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "^2.0.5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/gercordero/german-portfolio"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

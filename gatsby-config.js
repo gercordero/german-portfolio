@@ -29,20 +29,5 @@ module.exports = {
         singleTypes: [],
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`, `700`],
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `600`, `700`],
-          },
-        ],
-      },
-    },
   ],
 }
