@@ -10,13 +10,13 @@ import {
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const body = document.getElementsByTagName("BODY")[0]
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
 
   useEffect(() => {
+    const body = document.getElementsByTagName("BODY")[0]
     if (isOpen) {
       disableBodyScroll(body)
     } else {

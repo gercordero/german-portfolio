@@ -1,8 +1,12 @@
 import React from "react"
-import { Layout } from "../components"
+import { Layout, ContactForm } from "../components"
 
 const contact = () => {
-  return <h2>contact page</h2>
+  return (
+    <Layout>
+      <ContactForm />
+    </Layout>
+  )
 }
 
 export default contact

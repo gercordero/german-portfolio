@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Layout, SEO, Container, LinkButton } from "../components"
 
-const StyledContainer = styled(Container)`
+const ErrorSection = styled.section`
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -20,15 +20,17 @@ const Paragraph = styled.p`
 const Error = () => {
   return (
     <Layout>
-      <StyledContainer>
-        <div className="info">
-          <h1>Grats. You broke it.</h1>
-          <Paragraph>
-            This page doesn't exist or some other horrible error has ocurred.
-          </Paragraph>
-          <LinkButton to="/">back to homepage</LinkButton>
-        </div>
-      </StyledContainer>
+      <ErrorSection>
+        <Container>
+          <div className="info">
+            <h1>Grats. You broke it.</h1>
+            <Paragraph>
+              This page doesn't exist or some other horrible error has ocurred.
+            </Paragraph>
+            <LinkButton to="/">back to homepage</LinkButton>
+          </div>
+        </Container>
+      </ErrorSection>
     </Layout>
   )
 }
