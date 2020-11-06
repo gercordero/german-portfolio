@@ -14,8 +14,7 @@ export const StyledLinkButton = styled(Link)`
   font-weight: 700;
 
   &:hover {
-    background-color: ${props => props.theme.secondary};
-    color: ${props => props.theme.gray};
+    background-color: ${props => props.theme.primaryShade};
   }
 
   @media screen and (min-width: 576px) {

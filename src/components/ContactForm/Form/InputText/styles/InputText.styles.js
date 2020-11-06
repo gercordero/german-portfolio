@@ -45,7 +45,8 @@ export const InputContainer = styled.div`
     background-color: transparent;
     outline: none;
     padding: 12px 3px 12px 15px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     z-index: 1;
+    resize: none;
   }
 `

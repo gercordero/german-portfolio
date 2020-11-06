@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import InputText from "./InputText/InputText"
+import PulseLoader from "react-spinners/PulseLoader"
 import { useForm } from "react-hook-form"
 import { errorsHandler } from "./errorsHandler"
 import { sendMessage } from "../../../api/index"
@@ -9,12 +10,14 @@ import {
   EmailField,
   MessageField,
   StatusField,
+  SubmitField,
   SubmitInput,
 } from "./styles/Form.styles"
 
 const Form = () => {
-  //State for controling form errors
+  //State to know form status
   const [formState, setFormState] = useState({})
+
   //State to know if form is submitting
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -42,14 +45,13 @@ const Form = () => {
           label="Name"
           name="name"
           value={watchAllFields.name}
-          ref={register({ required: true, maxLength: 20 })}
+          ref={register({ required: true, maxLength: 30 })}
           error={
             (errors.name && errorsHandler(errors.name, "Name")) ||
             formState.name
           }
         />
       </NameField>
-      {console.log(errors)}
       <EmailField>
         <InputText
           label="Email"
@@ -58,7 +60,7 @@ const Form = () => {
           value={watchAllFields.email}
           ref={register({
             required: true,
-            pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
           })}
           error={
             (errors.email && errorsHandler(errors.email, "Email")) ||
@@ -79,13 +81,21 @@ const Form = () => {
           textarea
         />
       </MessageField>
-      <StatusField>{formState.status}</StatusField>
-      <SubmitInput
-        type="submit"
-        name="submit"
-        value="submit"
-        disabled={isSubmitting}
-      />
+      <SubmitField>
+        {isSubmitting ? (
+          <PulseLoader color={"white"} loading={isSubmitting} />
+        ) : (
+          <SubmitInput
+            type="submit"
+            name="submit"
+            value="submit"
+            disabled={isSubmitting}
+          />
+        )}
+      </SubmitField>
+      <StatusField sent={formState.status === "Message sent!"}>
+        {formState.status}
+      </StatusField>
     </StyledForm>
   )
 }
