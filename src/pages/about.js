@@ -1,11 +1,12 @@
 import React from "react"
-import { Layout, Title } from "../components"
-import { graphql } from "gatsby"
-import Image from "gatsby-image"
-// ...GatsbyImageSharpFluid
+import { Layout, AboutPage } from "../components"
 
 const About = () => {
-  return <h2>about page</h2>
+  return (
+    <Layout>
+      <AboutPage />
+    </Layout>
+  )
 }
 
 export default About

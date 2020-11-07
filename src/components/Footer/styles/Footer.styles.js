@@ -18,6 +18,10 @@ export const StyledFooter = styled.footer`
   & span {
     color: ${props => props.theme.secondary};
   }
+
+  @media screen and (min-width: 388px) {
+    height: 10vh;
+  }
 `
 
 export const FooterLinks = styled(SocialLinks)`
@@ -28,6 +32,7 @@ export const FooterLinks = styled(SocialLinks)`
   & .social-link {
     color: ${props => props.theme.white};
     margin: 0 1rem;
+    margin-top: 2rem;
   }
 
   & .social-link:hover {
