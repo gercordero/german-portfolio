@@ -20,6 +20,10 @@ const Paragraph = styled.p`
 const Error = () => {
   return (
     <Layout>
+      <SEO
+        title="Error"
+        description="German Cordero's web portfolio 404 error page"
+      />
       <ErrorSection>
         <Container>
           <div className="info">

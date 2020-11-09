@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, Container, LinkButton } from "../components"
+import { Layout, Container, LinkButton, SEO } from "../components"
 import { BlogTemplateSection, BlogContent } from "./styles/BlogTemplate.styles"
 import MDXCode from "./Highlight/MDXCode"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
@@ -8,6 +8,8 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 const ComponentName = ({ data }) => {
   const {
     blog: {
+      title,
+      desc,
       content: {
         childMdx: { body },
       },
@@ -17,6 +19,7 @@ const ComponentName = ({ data }) => {
   return (
     <MDXCode>
       <Layout>
+        <SEO title={title} description={desc} />
         <BlogTemplateSection>
           <Container>
             <BlogContent>
@@ -35,6 +38,8 @@ const ComponentName = ({ data }) => {
 export const query = graphql`
   query GetSingleBlog($slug: String) {
     blog: strapiBlogs(slug: { eq: $slug }) {
+      title
+      desc
       content: childStrapiBlogsContent {
         childMdx {
           body

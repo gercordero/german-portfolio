@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, RoundedButton } from "../"
+import { Container } from "../"
 import {
   AboutGrid,
   AboutSection,

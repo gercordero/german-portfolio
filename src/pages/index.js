@@ -7,6 +7,7 @@ import {
   Jobs,
   Projects,
   Blogs,
+  SEO,
 } from "../components"
 
 export default ({ data }) => {
@@ -17,6 +18,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Home" description="German Cordero's web portfolio homepage" />
       <Hero />
       <Methodologies />
       <Jobs />

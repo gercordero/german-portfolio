@@ -1,8 +1,15 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "German Cordero Portfolio",
-    description: "This is a web portfolio",
+    description:
+      "A web portfolio for showing German Cordero's project and experience",
     author: "@ger.cordero",
+    twitterUsername: "@gercorderok",
+    image: "/twitter-image.png",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -21,12 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.STRAPI_URL,
         queryLimit: 1000, // Default to 100
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`jobs`, `projects`, `blogs`],
-        singleTypes: [],
       },
     },
   ],
