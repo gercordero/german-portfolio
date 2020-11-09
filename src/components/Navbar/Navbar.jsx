@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import logo from "../../assets/logo.svg"
+import { Link } from "gatsby"
 import {
   StyledNav,
   StyledContainer,
@@ -33,7 +34,9 @@ const Navbar = ({ toggleSidebar, isOpen }) => {
     <StyledNav active={scrolled} sideBarOpen={isOpen}>
       <StyledContainer>
         <NavbarHeader>
-          <img src={logo} alt="Portfolio logo" />
+          <Link to="/">
+            <img src={logo} alt="Portfolio logo" />
+          </Link>
         </NavbarHeader>
         <ToggleBtn type="button" onClick={toggleSidebar}>
           <ToggleBtnBurger sideBarOpen={isOpen} />

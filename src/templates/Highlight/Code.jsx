@@ -11,6 +11,7 @@ const Code = ({ codeString, language, ...props }) => {
       theme={theme}
       code={codeString}
       language={language}
+      {...props}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <div className="gatsby-highlight" data-language={language}>
