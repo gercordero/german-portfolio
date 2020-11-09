@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ContactSection = styled.section`
   min-height: 90vh;
   padding-top: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 
   @media screen and (min-width: 1200px) {
     padding-top: 15rem;
@@ -13,7 +13,6 @@ export const ContactSection = styled.section`
 export const ContactCenter = styled.div`
   border-radius: ${props => props.theme.radius2};
   box-shadow: ${props => props.theme.lightShadow};
-  margin-bottom: 5rem;
 
   @media screen and (min-width: 1200px) {
     display: grid;
