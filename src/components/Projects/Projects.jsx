@@ -8,8 +8,8 @@ const Projects = ({ projects, title, isMainPage }) => {
     <StyledProjects isMainPage={isMainPage}>
       <Container>
         <Title>{title}</Title>
-        {projects.map(project => (
-          <Project key={project.strapiId} {...project} />
+        {projects.map((project, index) => (
+          <Project key={project.strapiId} index={index + 1} {...project} />
         ))}
         {isMainPage && <LinkButton to="/projects/">all projects</LinkButton>}
       </Container>

@@ -11,20 +11,12 @@ import {
 } from "./styles/Project.styles"
 import styles from "./styles/project.module.css"
 
-const Project = ({
-  strapiId,
-  title,
-  description,
-  image,
-  github,
-  url,
-  stack,
-}) => {
+const Project = ({ index, title, description, image, github, url, stack }) => {
   return (
     <StyledProject>
       {image && <ProjectImage fluid={image.childImageSharp.fluid} />}
       <ProjectInfo>
-        <ProjectNumber>0{strapiId}.</ProjectNumber>
+        <ProjectNumber>0{index}.</ProjectNumber>
         <h3>{title || "default title"}</h3>
         <ProjectDescription>{description}</ProjectDescription>
         <ProjectStack>
