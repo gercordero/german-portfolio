@@ -1,17 +1,20 @@
 import React from "react"
-import { Container } from "../"
-import { StyledFooter, FooterLinks } from "./styles/Footer.styles"
+import {
+  StyledFooter,
+  StyledContainer,
+  FooterLinks,
+} from "./styles/Footer.styles"
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <Container>
+      <StyledContainer>
         <FooterLinks />
         <h4>
           copyright&copy;{new Date().getFullYear()}
           <span> German Cordero </span> all rights reserved
         </h4>
-      </Container>
+      </StyledContainer>
     </StyledFooter>
   )
 }
