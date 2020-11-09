@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Title } from "../../"
 
 export const AboutSection = styled.div`
-  min-height: 90vh;
+  min-height: 85vh;
   padding: ${props => (props.isMainPage ? "5rem 0" : "10rem 0")};
 
   @media screen and (min-width: 1200px) {

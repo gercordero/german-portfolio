@@ -10,12 +10,16 @@ export const StyledFooter = styled.footer`
 export const StyledContainer = styled(Container)`
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: 1.3rem;
 
   & > h4 {
     margin-top: 1rem;
     text-align: center;
     color: ${props => props.theme.white};
+  }
+
+  & span {
+    color: ${props => props.theme.secondary};
   }
 `
 

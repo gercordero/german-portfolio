@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContactSection = styled.section`
-  min-height: 90vh;
+  min-height: 85vh;
   padding-top: 10rem;
 
   @media screen and (min-width: 1200px) {
