@@ -4,18 +4,22 @@ import SocialLinks from "../../../constants/socialLinks"
 
 export const StyledFooter = styled.footer`
   background-color: ${props => props.theme.gray};
-  margin-top: 4rem;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+  height: 9rem;
 `
 
 export const StyledContainer = styled(Container)`
   display: grid;
+  row-gap: 1rem;
   place-items: center;
-  padding: 1.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
 
-  & > h4 {
-    margin-top: 1rem;
-    text-align: center;
+  & h4 {
     color: ${props => props.theme.white};
+    margin-bottom: 0;
   }
 
   & span {
@@ -25,10 +29,11 @@ export const StyledContainer = styled(Container)`
 
 export const FooterLinks = styled(SocialLinks)`
   display: flex;
+  margin-top: 1rem;
 
   & > li > a {
-    font-size: 2rem;
     color: ${props => props.theme.white};
+    font-size: 2rem;
     margin: 0 1rem;
 
     &:hover {
