@@ -9,10 +9,6 @@ export const BlogTemplateSection = styled.section`
 export const BlogContent = styled.article`
   & h1 {
     font-size: 3rem;
-  }
-
-  & h1,
-  h2 {
     text-align: center;
   }
 
@@ -22,6 +18,10 @@ export const BlogContent = styled.article`
 
   & p {
     font-size: 1.1rem;
+  }
+
+  & a {
+    list-style: disc;
   }
 `
 
