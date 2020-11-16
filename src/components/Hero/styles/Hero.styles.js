@@ -3,101 +3,40 @@ import { Link } from "gatsby"
 import SocialLinks from "../../../constants/socialLinks"
 
 export const StyledHero = styled.header`
-  min-height: 100vh;
-`
-
-export const HeroGrid = styled.div`
-  padding-top: 10rem;
+  min-height: 70vh;
+  padding-top: 7.1rem;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 100%;
-  min-height: 100vh;
-
-  @media screen and (min-height: 770px) {
-    min-height: unset;
-    height: 100vh;
-    padding-top: 8rem;
-    grid-template-rows: 95% 5%;
-  }
-
-  @media screen and (min-width: 576px) {
-    grid-template-columns: auto 540px auto;
-  }
-
-  @media screen and (min-width: 768px) and (min-height: 875px) {
-    grid-template-columns: auto 720px auto;
-  }
-
-  @media screen and (min-width: 992px) {
-    grid-template-columns: auto 960px auto;
-  }
-
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: auto 1140px auto;
-  }
+  place-items: center;
 `
 
 export const HeroCenter = styled.div`
-  grid-column: 2/3;
-  grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 70% 30%;
-
-  @media screen and (min-width: 576px) {
-    grid-template-rows: 80% 20%;
-  }
+  padding-top: 1rem;
 `
 
 export const HeroInfo = styled.article`
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   text-align: center;
-  align-self: center;
-  margin-top: 5rem;
 
   & h2 {
     font-weight: 300;
+    margin-top: 2rem;
   }
 
-  @media screen and (min-width: 768px) and (min-height: 875px) {
+  @media screen and (min-width: 992px) {
     grid-column: 1 / span 6;
-    align-self: center;
     text-align: left;
+    margin: auto 0;
   }
 `
 
 export const HeroImage = styled.div`
   display: none;
-  @media screen and (min-width: 768px) and (min-height: 875px) {
+  @media screen and (min-width: 992px) {
     display: block;
-    grid-row: 1/2;
     grid-column: 7 / span 12;
-    align-self: center;
   }
-`
-
-export const HeroImageFooter = styled.div`
-  text-align: center;
-  grid-row: 2/3;
-  grid-column: 1 / span 12;
-  margin-bottom: -6px;
-  align-self: end;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  @media screen and (min-width: 576px) {
-    align-self: unset;
-    margin-bottom: -1px;
-  }
-`
-
-export const HeroFooter = styled.div`
-  grid-column: 1/-1;
-  grid-row: 2/3;
-  background-color: ${props => props.theme.primary};
 `
 
 export const HeroButton = styled(Link)`
@@ -109,7 +48,7 @@ export const HeroButton = styled(Link)`
   font-size: 1.3rem;
   border: 4px solid ${props => props.theme.primary};
   border-radius: ${props => props.theme.radius};
-  margin-top: 4rem;
+  margin: 2rem 0;
 
   &:hover {
     color: ${props => props.theme.secondary};
@@ -119,10 +58,9 @@ export const HeroButton = styled(Link)`
 
 /* Social Links */
 export const StyledSocialLinks = styled(SocialLinks)`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-evenly;
+  margin: 2rem 0;
 
   .social-link {
     font-size: 2.2rem;
@@ -134,9 +72,8 @@ export const StyledSocialLinks = styled(SocialLinks)`
     }
   }
 
-  @media screen and (min-width: 768px) and (min-height: 875px) {
-    margin-top: 3.2rem;
-    width: 20rem;
+  @media screen and (min-width: 992px) {
     justify-content: space-between;
+    width: 20rem;
   }
 `

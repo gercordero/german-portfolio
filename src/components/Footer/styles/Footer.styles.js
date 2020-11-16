@@ -7,7 +7,10 @@ export const StyledFooter = styled.footer`
   display: grid;
   place-items: center;
   margin-top: 5rem;
-  height: 9rem;
+
+  @media screen and (min-width: 333px) {
+    height: 9rem;
+  }
 `
 
 export const StyledContainer = styled(Container)`

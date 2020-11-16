@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import {
   Layout,
   Hero,
+  HeroFooter,
   Methodologies,
   Jobs,
   Projects,
@@ -20,6 +21,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" description="German Cordero's web portfolio homepage" />
       <Hero />
+      <HeroFooter />
       <Methodologies />
       <Jobs />
       <Projects projects={projects} title="featured projects" isMainPage />

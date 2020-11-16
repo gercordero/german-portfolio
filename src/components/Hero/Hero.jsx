@@ -1,15 +1,12 @@
 import React from "react"
 import Image from "gatsby-image"
-import heroSvg from "../../assets/hero-svg.svg"
+import { Container } from "../"
 import { graphql, useStaticQuery } from "gatsby"
 import {
   StyledHero,
-  HeroGrid,
   HeroCenter,
   HeroInfo,
   HeroImage,
-  HeroImageFooter,
-  HeroFooter,
   HeroButton,
   StyledSocialLinks,
 } from "./styles/Hero.styles"
@@ -36,7 +33,7 @@ const Hero = () => {
 
   return (
     <StyledHero>
-      <HeroGrid>
+      <Container>
         <HeroCenter>
           <HeroInfo>
             <h1 className="display-4">I’m Germán</h1>
@@ -49,12 +46,8 @@ const Hero = () => {
           <HeroImage>
             <Image fluid={fluid} alt="Hero image" />
           </HeroImage>
-          <HeroImageFooter>
-            <img src={heroSvg} alt="Hero Desktop Svg" />
-          </HeroImageFooter>
         </HeroCenter>
-        <HeroFooter />
-      </HeroGrid>
+      </Container>
     </StyledHero>
   )
 }
