@@ -12,6 +12,10 @@ export const BlogContent = styled.article`
     text-align: center;
   }
 
+  & h2 {
+    margin-top: 2rem;
+  }
+
   & hr {
     margin-bottom: 5rem;
   }
@@ -21,14 +25,15 @@ export const BlogContent = styled.article`
   }
 
   & ul {
+    list-style: inside;
     list-style-type: disc;
   }
 
   & code {
     background-color: rgb(40, 44, 52);
-    color: rgb(197, 165, 197);
+    color: #79b6f2;
     padding: 0.2rem;
-    border-radius: ${props => props.theme.radius2};
+    border-radius: 0.25rem;
   }
 `
 
