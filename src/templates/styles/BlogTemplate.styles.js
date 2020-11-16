@@ -20,8 +20,15 @@ export const BlogContent = styled.article`
     font-size: 1.1rem;
   }
 
-  & a {
-    list-style: disc;
+  & ul {
+    list-style-type: disc;
+  }
+
+  & code {
+    background-color: rgb(40, 44, 52);
+    color: rgb(197, 165, 197);
+    padding: 0.2rem;
+    border-radius: ${props => props.theme.radius2};
   }
 `
 
