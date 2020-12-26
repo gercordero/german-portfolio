@@ -65,8 +65,9 @@ export const SubmitField = styled.div`
   }
 `
 
-//************** Input Styles *****************
-export const SubmitInput = styled.input`
+//************** Button Styles *****************
+export const SubmitButton = styled.input`
+  cursor: pointer;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.2rem;

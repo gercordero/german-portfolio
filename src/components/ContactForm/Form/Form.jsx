@@ -11,7 +11,7 @@ import {
   MessageField,
   StatusField,
   SubmitField,
-  SubmitInput,
+  SubmitButton,
 } from "./styles/Form.styles"
 
 const Form = () => {
@@ -85,7 +85,7 @@ const Form = () => {
         {isSubmitting ? (
           <PulseLoader color={"white"} loading={isSubmitting} />
         ) : (
-          <SubmitInput
+          <SubmitButton
             type="submit"
             name="submit"
             value="submit"

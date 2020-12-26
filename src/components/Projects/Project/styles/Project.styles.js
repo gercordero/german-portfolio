@@ -85,7 +85,7 @@ export const ProjectNumber = styled.span`
 `
 
 export const ProjectDescription = styled.p`
-  word-spacing: 15px;
+  word-spacing: 3px;
   color: ${props => props.theme.gray};
 `
 
@@ -95,5 +95,11 @@ export const ProjectStack = styled.div`
   span {
     margin: 0.6rem;
     margin-left: 0;
+  }
+`
+
+export const ProjectLinks = styled.div`
+  a > svg:hover {
+    color: ${props => props.theme.secondary};
   }
 `

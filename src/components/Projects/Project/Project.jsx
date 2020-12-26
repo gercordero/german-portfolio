@@ -8,6 +8,7 @@ import {
   ProjectNumber,
   ProjectDescription,
   ProjectStack,
+  ProjectLinks,
 } from "./styles/Project.styles"
 import styles from "./styles/project.module.css"
 
@@ -26,14 +27,24 @@ const Project = ({ index, title, description, image, github, url, stack }) => {
             </span>
           ))}
         </ProjectStack>
-        <div className="project-links">
-          <a href={github}>
+        <ProjectLinks>
+          <a
+            href={github}
+            title="Github Repo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithubSquare className={styles.projectIcon} />
           </a>
-          <a href={url}>
+          <a
+            href={url}
+            title="Go to project page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaShareSquare className={styles.projectIcon} />
           </a>
-        </div>
+        </ProjectLinks>
       </ProjectInfo>
     </StyledProject>
   )
