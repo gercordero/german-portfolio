@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, Container, LinkButton, SEO } from "../components"
+import { Container, LinkButton, SEO } from "../components"
 import { BlogTemplateSection, BlogContent } from "./styles/BlogTemplate.styles"
 import MDXCode from "./Highlight/MDXCode"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
@@ -18,19 +18,17 @@ const ComponentName = ({ data }) => {
 
   return (
     <MDXCode>
-      <Layout>
-        <SEO title={title} description={desc} />
-        <BlogTemplateSection>
-          <Container>
-            <BlogContent>
-              <MDXRenderer>{body}</MDXRenderer>
-              <LinkButton to="/blog/" style={{ marginTop: "8rem" }}>
-                back to blogs
-              </LinkButton>
-            </BlogContent>
-          </Container>
-        </BlogTemplateSection>
-      </Layout>
+      <SEO title={title} description={desc} />
+      <BlogTemplateSection>
+        <Container>
+          <BlogContent>
+            <MDXRenderer>{body}</MDXRenderer>
+            <LinkButton to="/blog/" style={{ marginTop: "8rem" }}>
+              back to blogs
+            </LinkButton>
+          </BlogContent>
+        </Container>
+      </BlogTemplateSection>
     </MDXCode>
   )
 }

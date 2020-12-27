@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import {
-  Layout,
   Hero,
   HeroFooter,
   Methodologies,
@@ -18,7 +17,7 @@ export default ({ data }) => {
   } = data
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" description="German Cordero's web portfolio homepage" />
       <Hero />
       <HeroFooter />
@@ -26,7 +25,7 @@ export default ({ data }) => {
       <Jobs />
       <Projects projects={projects} title="featured projects" isMainPage />
       <Blogs blogs={blogs} title="latest articles" isMainPage />
-    </Layout>
+    </>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Layout, SEO, Container, LinkButton } from "../components"
+import { SEO, Container, LinkButton } from "../components"
 
 const ErrorSection = styled.section`
   min-height: 100vh;
@@ -19,7 +19,7 @@ const Paragraph = styled.p`
 
 const Error = () => {
   return (
-    <Layout>
+    <>
       <SEO
         title="Error"
         description="German Cordero's web portfolio 404 error page"
@@ -35,7 +35,7 @@ const Error = () => {
           </div>
         </Container>
       </ErrorSection>
-    </Layout>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Blogs, SEO } from "../components"
+import { Blogs, SEO } from "../components"
 import { graphql } from "gatsby"
 
 const Blog = ({ data }) => {
@@ -8,13 +8,13 @@ const Blog = ({ data }) => {
   } = data
 
   return (
-    <Layout>
+    <>
       <SEO
         title="Blog"
         description="German Cordero's web portfolio blog page"
       />
       <Blogs blogs={blogs} title="blog" />
-    </Layout>
+    </>
   )
 }
 

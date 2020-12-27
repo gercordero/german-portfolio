@@ -7,8 +7,9 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock"
+import PageTransition from "../../animations/PageTransition"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleSidebar = () => {
@@ -31,8 +32,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
-      <Sidebar isOpen={isOpen} />
-      {children}
+      {isOpen && <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />}
+
+      <PageTransition location={location}>
+        <main>{children}</main>
+      </PageTransition>
       <Footer />
     </ThemeProvider>
   )

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Container } from "../../"
-import NavLinks from "../../../constants/links"
+import NavbarLinks from "../NavbarLinks/NavbarLinks"
 
 export const StyledNav = styled.nav`
   width: 100vw;
@@ -83,7 +83,7 @@ export const ToggleBtnBurger = styled.div`
   }
 `
 
-export const StyledNavLinks = styled(NavLinks)`
+export const StyledNavLinks = styled(NavbarLinks)`
   display: none;
 
   li {

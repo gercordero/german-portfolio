@@ -1,10 +1,10 @@
 import React from "react"
 import { StyledSidebar, StyledLinks } from "./styles/Sidebar.styles"
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ toggleSidebar, isOpen }) => {
   return (
     <StyledSidebar showSidebar={isOpen}>
-      <StyledLinks showLinks={isOpen}></StyledLinks>
+      <StyledLinks toggleSidebar={toggleSidebar} showLinks={isOpen} />
     </StyledSidebar>
   )
 }
