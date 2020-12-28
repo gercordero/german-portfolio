@@ -1,16 +1,20 @@
 import React from "react"
+// Gatsby plugins and helpers
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
+// Components
 import { Container } from "../"
+// Styled components
 import {
   AboutGrid,
   AboutSection,
   AboutInfo,
+  AboutStack,
   StyledTitle,
   ButtonContainer,
   ResumeButton,
   AboutImage,
 } from "./styles/AboutPage.styles"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 
 const query = graphql`
   {
@@ -21,6 +25,13 @@ const query = graphql`
         }
       }
     }
+    strapiAbout {
+      description
+      stack {
+        item
+        id
+      }
+    }
   }
 `
 
@@ -29,7 +40,10 @@ const About = () => {
     file: {
       childImageSharp: { fluid },
     },
+    strapiAbout: { description, stack },
   } = useStaticQuery(query)
+
+  console.log(description, stack)
 
   return (
     <AboutSection>
@@ -40,13 +54,14 @@ const About = () => {
           </AboutImage>
           <AboutInfo>
             <StyledTitle>About me</StyledTitle>
-            <p>
-              I develop websites and web applications using my front and back
-              end skills. When dealing with a project I pay attention to the
-              smallest details addressing problems with patience. In addition to
-              my knowledge base, I actively seek out new technologies and stay
-              up-to-date on industry trends and advancements.
-            </p>
+            <p>{description}</p>
+            <AboutStack>
+              {stack.map(element => (
+                <span key={element.id} className="btn-gray">
+                  {element.item}
+                </span>
+              ))}
+            </AboutStack>
             <ButtonContainer>
               <ResumeButton href={""} download className="button">
                 download resume

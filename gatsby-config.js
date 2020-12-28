@@ -32,6 +32,7 @@ module.exports = {
         apiURL: process.env.STRAPI_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
       },
     },
   ],

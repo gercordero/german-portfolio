@@ -16,6 +16,7 @@ export const AboutGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 5rem;
+    place-items: center;
   }
 `
 
@@ -32,7 +33,8 @@ export const AboutImage = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-    grid-column: 1/5;
+    grid-column: 1/6;
+    place-items: center;
     margin: unset;
   }
 `
@@ -45,9 +47,19 @@ export const AboutInfo = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-    grid-column: 6/12;
+    grid-column: 6/-1;
     text-align: left;
     margin: auto;
+  }
+`
+
+export const AboutStack = styled.div`
+  margin-bottom: 1.6rem;
+
+  span {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-left: 0;
   }
 `
 
