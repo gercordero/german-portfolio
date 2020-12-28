@@ -10,14 +10,16 @@ import {
 
 const HeroFooter = () => {
   return (
-    <HeroFooterSection>
-      <HeroFooterImage>
-        <Container>
-          <img src={heroSvg} alt="Hero img footer" />
-        </Container>
-      </HeroFooterImage>
-      <HeroFooterBottom />
-    </HeroFooterSection>
+    <div>
+      <HeroFooterSection>
+        <HeroFooterImage>
+          <Container>
+            <img src={heroSvg} alt="Hero img footer" />
+          </Container>
+        </HeroFooterImage>
+        <HeroFooterBottom />
+      </HeroFooterSection>
+    </div>
   )
 }
 
