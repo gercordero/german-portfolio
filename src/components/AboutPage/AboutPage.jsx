@@ -43,8 +43,6 @@ const About = () => {
     strapiAbout: { description, stack },
   } = useStaticQuery(query)
 
-  console.log(description, stack)
-
   return (
     <AboutSection>
       <Container>
