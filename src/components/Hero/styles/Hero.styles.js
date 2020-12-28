@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 import SocialLinks from "../../../constants/socialLinks"
 
 export const StyledHero = styled.header`
@@ -36,23 +35,6 @@ export const HeroImage = styled.div`
   @media screen and (min-width: 992px) {
     display: block;
     grid-column: 7 / span 12;
-  }
-`
-
-export const HeroButton = styled(Link)`
-  background: ${props => props.theme.white};
-  color: ${props => props.theme.primary};
-  padding: 0.6rem 0.6rem;
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.3rem;
-  border: 4px solid ${props => props.theme.primary};
-  border-radius: ${props => props.theme.radius};
-  margin: 2rem 0;
-
-  &:hover {
-    color: ${props => props.theme.secondary};
-    border-color: ${props => props.theme.secondary};
   }
 `
 

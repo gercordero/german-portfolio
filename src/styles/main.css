@@ -11,6 +11,7 @@
   --gray-4: #f1f5f8;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
+  --white: "#fff";
 }
 
 *,
@@ -77,6 +78,23 @@ ul {
   outline-color: var(--secondary) !important;
   transition: var(--transition);
   letter-spacing: var(--spacing);
+}
+
+.btn-rounded {
+  background: var(--white);
+  color: var(--primary);
+  padding: 0.6rem 0.6rem;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 4px solid var(--primary);
+  border-radius: var(--radius);
+  margin: 2rem 0;
+}
+
+.btn-rounded:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
 }
 
 .btn-gray {

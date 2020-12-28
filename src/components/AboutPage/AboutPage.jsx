@@ -12,7 +12,6 @@ import {
   AboutStack,
   StyledTitle,
   ButtonContainer,
-  ResumeButton,
   AboutImage,
 } from "./styles/AboutPage.styles"
 
@@ -44,31 +43,33 @@ const About = () => {
   } = useStaticQuery(query)
 
   return (
-    <AboutSection>
-      <Container>
-        <AboutGrid>
-          <AboutImage>
-            <Image fluid={fluid} alt="About image" />
-          </AboutImage>
-          <AboutInfo>
-            <StyledTitle>About me</StyledTitle>
-            <p>{description}</p>
-            <AboutStack>
-              {stack.map(element => (
-                <span key={element.id} className="btn-gray">
-                  {element.item}
-                </span>
-              ))}
-            </AboutStack>
-            <ButtonContainer>
-              <ResumeButton href={""} download className="button">
-                download resume
-              </ResumeButton>
-            </ButtonContainer>
-          </AboutInfo>
-        </AboutGrid>
-      </Container>
-    </AboutSection>
+    <div>
+      <AboutSection>
+        <Container>
+          <AboutGrid>
+            <AboutImage>
+              <Image fluid={fluid} alt="About image" />
+            </AboutImage>
+            <AboutInfo>
+              <StyledTitle>About me</StyledTitle>
+              <p>{description}</p>
+              <AboutStack>
+                {stack.map(element => (
+                  <span key={element.id} className="btn-gray">
+                    {element.item}
+                  </span>
+                ))}
+              </AboutStack>
+              <ButtonContainer>
+                <a href={""} download className="button btn-rounded">
+                  download resume
+                </a>
+              </ButtonContainer>
+            </AboutInfo>
+          </AboutGrid>
+        </Container>
+      </AboutSection>
+    </div>
   )
 }
 

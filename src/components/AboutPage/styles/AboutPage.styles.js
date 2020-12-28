@@ -72,23 +72,6 @@ export const ButtonContainer = styled.div`
   }
 `
 
-export const ResumeButton = styled.a`
-  background: ${props => props.theme.white};
-  color: ${props => props.theme.primary};
-  margin-right: 1rem;
-  padding: 0.6rem 0.6rem;
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.3rem;
-  border: 3px solid ${props => props.theme.primary};
-  border-radius: ${props => props.theme.radius};
-
-  &:hover {
-    color: ${props => props.theme.secondary};
-    border-color: ${props => props.theme.secondary};
-  }
-`
-
 export const StyledTitle = styled(props => <Title {...props} />)`
   margin-top: 2rem;
 

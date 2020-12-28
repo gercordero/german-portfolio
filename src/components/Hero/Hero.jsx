@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 import { Container } from "../"
 import { graphql, useStaticQuery } from "gatsby"
 import {
@@ -7,7 +8,6 @@ import {
   HeroCenter,
   HeroInfo,
   HeroImage,
-  HeroButton,
   StyledSocialLinks,
 } from "./styles/Hero.styles"
 
@@ -38,9 +38,9 @@ const Hero = () => {
           <HeroInfo>
             <h1 className="display-4">I’m Germán</h1>
             <h2>Front-end Web Developer & Designer</h2>
-            <HeroButton to="/contact/" className="button">
+            <Link to="/contact/" className="button btn-rounded">
               contact me
-            </HeroButton>
+            </Link>
             <StyledSocialLinks />
           </HeroInfo>
           <HeroImage>
