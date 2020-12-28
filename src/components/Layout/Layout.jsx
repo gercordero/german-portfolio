@@ -36,8 +36,8 @@ const Layout = ({ children, location }) => {
 
       <PageTransition location={location}>
         <main>{children}</main>
+        <Footer />
       </PageTransition>
-      <Footer />
     </ThemeProvider>
   )
 }
