@@ -14,16 +14,17 @@ export const JobsGrid = styled.div`
 
 export const JobsButtons = styled.div`
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 2rem;
 
   & > h3 {
-    display: none;
+    margin-bottom: 2rem;
   }
 
   @media screen and (min-width: 768px) {
-    flex-direction: column;
+    align-items: unset;
     justify-content: flex-start;
     border-right: 1px dotted ${props => props.theme.primary};
     height: 100%;
