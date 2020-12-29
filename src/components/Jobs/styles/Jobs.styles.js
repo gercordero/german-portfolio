@@ -24,6 +24,7 @@ export const JobsButtons = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    margin-bottom: unset;
     align-items: unset;
     justify-content: flex-start;
     border-right: 1px dotted ${props => props.theme.primary};
