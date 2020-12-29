@@ -53,6 +53,7 @@ const About = () => {
             <AboutInfo>
               <StyledTitle>About me</StyledTitle>
               <p>{description}</p>
+              <p>Some of the technologies that I work with: </p>
               <AboutStack>
                 {stack.map(element => (
                   <span key={element.id} className="btn-gray">

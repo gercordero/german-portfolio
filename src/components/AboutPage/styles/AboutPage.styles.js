@@ -54,8 +54,6 @@ export const AboutInfo = styled.div`
 `
 
 export const AboutStack = styled.div`
-  margin-bottom: 1.6rem;
-
   span {
     margin-right: 0.4rem;
     margin-bottom: 0.4rem;
@@ -66,10 +64,6 @@ export const AboutStack = styled.div`
 export const ButtonContainer = styled.div`
   width: 100%;
   text-align: center;
-
-  @media screen and (min-width: 992px) {
-    text-align: left;
-  }
 `
 
 export const StyledTitle = styled(props => <Title {...props} />)`

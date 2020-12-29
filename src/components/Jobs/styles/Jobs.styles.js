@@ -42,6 +42,10 @@ export const JobButton = styled.button`
     box-shadow: 0 2px ${props => props.theme.primary};
   }
 
+  &:focus {
+    outline-color: ${props => props.theme.secondary};
+  }
+
   @media screen and (min-width: 768px) {
     box-shadow: ${props =>
       props.active ? `-4px 0 ${props.theme.primary}` : ""};
