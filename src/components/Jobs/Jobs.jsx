@@ -7,10 +7,10 @@ import {
   JobsGrid,
   JobsButtons,
   JobButton,
+  JobInfo,
   JobDate,
   JobDescription,
 } from "./styles/Jobs.styles"
-import styles from "./styles/jobs.module.css"
 
 const jobsQuery = graphql`
   {
@@ -45,6 +45,7 @@ const Jobs = () => {
       <Container>
         <JobsGrid>
           <JobsButtons>
+            <h3>Companies</h3>
             {jobs.map((job, index) => (
               <JobButton
                 key={job.strapiId}
@@ -57,7 +58,7 @@ const Jobs = () => {
               </JobButton>
             ))}
           </JobsButtons>
-          <div className="job-info">
+          <JobInfo>
             <h2>{position}</h2>
             <h5 className="btn-gray" style={{ marginBottom: "0.4rem" }}>
               {company}
@@ -65,13 +66,11 @@ const Jobs = () => {
             <JobDate>{date}</JobDate>
             {desc.map(item => (
               <JobDescription key={item.id}>
-                <FaAngleDoubleRight
-                  className={styles.jobIcon}
-                ></FaAngleDoubleRight>
+                <FaAngleDoubleRight />
                 <p>{item.item}</p>
               </JobDescription>
             ))}
-          </div>
+          </JobInfo>
         </JobsGrid>
       </Container>
     </JobsSection>

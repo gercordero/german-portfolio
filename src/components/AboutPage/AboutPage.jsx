@@ -2,6 +2,8 @@ import React from "react"
 // Gatsby plugins and helpers
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+// CV file
+import german_cv from "../../assets/german-cv.pdf"
 // Components
 import { Container } from "../"
 // Styled components
@@ -62,7 +64,12 @@ const About = () => {
                 ))}
               </AboutStack>
               <ButtonContainer>
-                <a href={""} download className="button btn-rounded">
+                <a
+                  href={german_cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button btn-rounded"
+                >
                   download resume
                 </a>
               </ButtonContainer>

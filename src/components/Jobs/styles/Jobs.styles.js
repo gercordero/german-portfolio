@@ -8,7 +8,7 @@ export const JobsGrid = styled.div`
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 200px 1fr;
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
 `
 
@@ -18,9 +18,21 @@ export const JobsButtons = styled.div`
   justify-content: center;
   margin-bottom: 2rem;
 
+  & > h3 {
+    display: none;
+  }
+
   @media screen and (min-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
+    border-right: 1px dotted ${props => props.theme.primary};
+    height: 100%;
+
+    & > h3 {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
   }
 `
 
@@ -54,6 +66,15 @@ export const JobButton = styled.button`
       box-shadow: -4px 0 ${props => props.theme.primary};
     }
   }
+`
+export const JobInfo = styled.div`
+  & > div > svg {
+    color: ${props => props.theme.primary};
+  }
+
+  /* @media screen and (min-width: 992px) {
+    border-right: 1px dotted var(--primary);
+  } */
 `
 
 export const JobDate = styled.p`
