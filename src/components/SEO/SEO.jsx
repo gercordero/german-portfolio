@@ -27,8 +27,20 @@ const SEO = ({ title, description }) => {
   } = site.siteMetadata
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: "en" }}>
-      <meta name="description" content={description || siteDesc} />
-      <meta name="image" content={image} />
+      {/* Title meta */}
+      <meta
+        name="title"
+        property="og:title"
+        content={`${title} | ${siteTitle}`}
+      />
+      {/* Description meta */}
+      <meta
+        name="description"
+        property="og:description"
+        content={description || siteDesc}
+      />
+      {/* Image meta */}
+      <meta name="image" property="og:image" content={image} />
       {/* twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />

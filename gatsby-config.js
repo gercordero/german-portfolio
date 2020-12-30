@@ -6,10 +6,10 @@ module.exports = {
   siteMetadata: {
     title: "German Cordero Portfolio",
     description:
-      "A web portfolio for showing German Cordero's project and experience",
+      "A web portfolio for showcasing all my projects, experiences and my personal blog",
     author: "@ger.cordero",
     twitterUsername: "@gercorderok",
-    image: "/twitter-image.png",
+    image: "/meta-image.png",
     siteUrl: "https://german-portfolio.netlify.app",
   },
   plugins: [
