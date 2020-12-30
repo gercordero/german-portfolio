@@ -33,14 +33,20 @@ const SEO = ({ title, description }) => {
         property="og:title"
         content={`${title} | ${siteTitle}`}
       />
+
       {/* Description meta */}
       <meta
         name="description"
         property="og:description"
         content={description || siteDesc}
       />
+
+      {/* Url meta */}
+      <meta name="url" property="og:url" content={siteUrl} />
+
       {/* Image meta */}
-      <meta name="image" property="og:image" content={image} />
+      <meta name="image" property="og:image" content={`${siteUrl}${image}`} />
+
       {/* twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
