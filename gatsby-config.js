@@ -10,7 +10,7 @@ module.exports = {
     author: "@ger.cordero",
     twitterUsername: "@gercorderok",
     image: "/meta-image.png",
-    siteUrl: "https://german-portfolio.netlify.app",
+    siteUrl: "https://germancordero.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
