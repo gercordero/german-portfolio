@@ -43,11 +43,7 @@ const SEO = ({ title, description }) => {
       />
 
       {/* Url meta */}
-      <meta
-        name="url"
-        property="og:url"
-        content="http://euro-travel-example.com/index.htm"
-      />
+      <meta name="url" property="og:url" content={siteUrl} />
 
       {/* Image meta */}
       <meta name="image" property="og:image" content={`${siteUrl}${image}`} />
