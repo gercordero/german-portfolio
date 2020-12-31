@@ -9,8 +9,8 @@ module.exports = {
       "A web portfolio for showcasing all of my projects, experiences and my personal blog",
     author: "German Cordero",
     twitterUsername: "@gercorderok",
-    image: "home-image.jpg",
-    siteUrl: "https://germancordero.com/",
+    image: "/home-image.jpg",
+    siteUrl: "https://germancordero.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,

@@ -37,7 +37,7 @@ const SEO = ({ title, description }) => {
       {/* Description meta */}
       <meta property="og:description" content={description || siteDesc} />
       {/* Image meta */}
-      <meta property="og:image" content={`${siteUrl}${image}`} />
+      <meta property="og:image" content={`${siteUrl}${image}?reset=12334352`} />
       {/* Facebook meta */}
       <meta property="fb:app_id" content="1542065056004604" />
       {/* Twitter cards */}
@@ -45,7 +45,10 @@ const SEO = ({ title, description }) => {
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDesc} />
-      <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      <meta
+        name="twitter:image"
+        content={`${siteUrl}${image}?reset=12334352`}
+      />
     </Helmet>
   )
 }
