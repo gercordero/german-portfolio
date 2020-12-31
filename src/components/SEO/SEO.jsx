@@ -20,6 +20,7 @@ const query = graphql`
 const SEO = ({ title, description }) => {
   const { site } = useStaticQuery(query)
   const {
+    author,
     siteDesc,
     siteTitle,
     siteUrl,
@@ -28,27 +29,34 @@ const SEO = ({ title, description }) => {
   } = site.siteMetadata
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: "en" }}>
+      {/* Author meta */}
+      <meta name="author" content={author} />
       {/* Url meta */}
-      <meta property="og:url" content={siteUrl} />
+      <meta name="url" property="og:url" content={siteUrl} />
       {/* Type meta */}
-      <meta property="og:type" content="article" />
+      <meta name="type" property="og:type" content="article" />
       {/* Title meta */}
-      <meta property="og:title" content={`${title} | ${siteTitle}`} />
+      <meta
+        name="title"
+        property="og:title"
+        content={`${title} | ${siteTitle}`}
+      />
       {/* Description meta */}
-      <meta property="og:description" content={description || siteDesc} />
+      <meta
+        name="description"
+        property="og:description"
+        content={description || siteDesc}
+      />
       {/* Image meta */}
-      <meta property="og:image" content={`${siteUrl}${image}?reset=12334352`} />
+      <meta name="image" property="og:image" content={`${siteUrl}${image}`} />
       {/* Facebook meta */}
-      <meta property="fb:app_id" content="1542065056004604" />
+      <meta name="fb:app_id" property="fb:app_id" content="1542065056004604" />
       {/* Twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDesc} />
-      <meta
-        name="twitter:image"
-        content={`${siteUrl}${image}?reset=12334352`}
-      />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} />
     </Helmet>
   )
 }
