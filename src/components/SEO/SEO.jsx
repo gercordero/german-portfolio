@@ -28,27 +28,19 @@ const SEO = ({ title, description }) => {
   } = site.siteMetadata
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: "en" }}>
-      {/* Title meta */}
-      <meta
-        name="title"
-        property="og:title"
-        content={`${title} | ${siteTitle}`}
-      />
-
-      {/* Description meta */}
-      <meta
-        name="description"
-        property="og:description"
-        content={description || siteDesc}
-      />
-
       {/* Url meta */}
-      <meta name="url" property="og:url" content={siteUrl} />
-
+      <meta property="og:url" content={siteUrl} />
+      {/* Type meta */}
+      <meta property="og:type" content="article" />
+      {/* Title meta */}
+      <meta property="og:title" content={`${title} | ${siteTitle}`} />
+      {/* Description meta */}
+      <meta property="og:description" content={description || siteDesc} />
       {/* Image meta */}
-      <meta name="image" property="og:image" content={`${siteUrl}${image}`} />
-
-      {/* twitter cards */}
+      <meta property="og:image" content={`${siteUrl}${image}`} />
+      {/* Facebook meta */}
+      <meta property="fb:app_id" content="1542065056004604" />
+      {/* Twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
