@@ -11,6 +11,7 @@ const query = graphql`
         image
         siteTitle: title
         twitterUsername
+        siteUrl
       }
     }
   }
@@ -42,7 +43,11 @@ const SEO = ({ title, description }) => {
       />
 
       {/* Url meta */}
-      <meta name="url" property="og:url" content={siteUrl} />
+      <meta
+        name="url"
+        property="og:url"
+        content="http://euro-travel-example.com/index.htm"
+      />
 
       {/* Image meta */}
       <meta name="image" property="og:image" content={`${siteUrl}${image}`} />
