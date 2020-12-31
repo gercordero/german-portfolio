@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: "German Cordero Portfolio",
     description:
-      "A web portfolio for showcasing all my projects, experiences and my personal blog",
+      "A web portfolio for showcasing all of my projects, experiences and my personal blog",
     author: "@ger.cordero",
     twitterUsername: "@gercorderok",
     image: "/meta-image.png",

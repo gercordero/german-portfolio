@@ -18,7 +18,7 @@ export default ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" description="German Cordero's web portfolio homepage" />
+      <SEO title="Home" />
       <Hero />
       <HeroFooter />
       <Methodologies />
