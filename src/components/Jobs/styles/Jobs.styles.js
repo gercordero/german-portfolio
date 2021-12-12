@@ -54,6 +54,7 @@ export const JobButton = styled.button`
   &:hover {
     color: ${props => props.theme.primary};
     box-shadow: 0 2px ${props => props.theme.primary};
+    cursor: pointer;
   }
 
   &:focus {
